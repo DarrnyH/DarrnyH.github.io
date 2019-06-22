@@ -1,0 +1,129 @@
+:root {
+    --main-bg-color: #9e0031;
+    --main-black: #0a100d;
+    --main-white: #e8e9f3;
+    --main-green: #b9baa3;
+    --main-gray: #d5d6c9;
+}
+
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  'Pacifico', 'Ultra', 'Josefin Slab', cursive;
+    background: var(--main-bg-color);
+    color: var(--main-white);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--main-white);
+    text-decoration: none;
+}
+
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: 0px 20px 5px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px var(--main-white) solid;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#navbar a:hover {
+    color: var(--main-bg-color);
+}
+
+#navbar i {
+    font-size: 2rem;
+}
+
+#navbar li {
+    display: inline;
+    list-style: none;
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: var(--main-white);
+    padding: 15px;
+    transition: 1s all;
+}
+
+#navbar li a:hover {
+    background-color: var(--main-white);
+    color: var(--main-black);
+}
+
+/* Showcase */
+#showcase {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-image: url('https://nighthelper.com/wp-content/uploads/2015/10/vintage-cars-1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--main-white);
+    text-align: center;
+}
+
+#showcase .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #04091e;
+    opacity: 0.8;
+}
+
+#showcase .showcase-text {
+    z-index: 2;
+}
+
+section:nth-child(even) {
+    background-color: var(--main-white);
+    color: var(--main-bg-color);
+}
+
+/* Section: about us */
+#about {
+    display: flex;
+}
+#about .about-image img {
+    width: 100%;
+    height: 100%;
+}
+
+#about .about-text {
+    padding: 25px;
+}
+
+#about .about-text h2 {
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+#about .about-text ul {
+    list-style: none;
+}
+
+#about .about-text li {
+    padding-top: 15px;
+    border-bottom: 1px var(--main-white) solid;
+}
