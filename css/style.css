@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family:  'Pacifico', 'Ultra', 'Josefin Slab', cursive;
+    font-family:  'Ultra','Pacifico',  'Josefin Slab', cursive;
     background: var(--main-bg-color);
     color: var(--main-white);
     font-size: 1.2rem;
@@ -34,14 +34,21 @@ a {
     top: 0;
     width: 100%;
     display: flex;
-    padding: 0px 20px 5px 20px;
+    padding: 5px 20px 5px 20px;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px var(--main-white) solid;
     background: rgba(0, 0, 0, 0.1);
 }
 
+#navbar a {
+    border-radius: 30px;
+    transition: .8s all;
+}
+
 #navbar a:hover {
+    background-color: var(--main-gray);
+    padding: 10px;
     color: var(--main-bg-color);
 }
 
@@ -57,12 +64,13 @@ a {
 #navbar li a {
     text-decoration: none;
     color: var(--main-white);
-    padding: 15px;
+    padding: 5px;
     transition: 1s all;
+    border-radius: 20px;
 }
 
 #navbar li a:hover {
-    background-color: var(--main-white);
+    background: var(--main-gray);
     color: var(--main-black);
 }
 
@@ -126,4 +134,94 @@ section:nth-child(even) {
 #about .about-text li {
     padding-top: 15px;
     border-bottom: 1px var(--main-white) solid;
+}
+
+/* Cards */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.card {
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 80%;
+    height: 300px;
+    background: var(--main-gray);
+    align-items: center;
+    margin: 30px 0;
+    transition: .8s all;
+}
+
+.card:hover {
+    width: 90%;
+    height: 350px;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card .card-img {
+    width: 30%;
+    max-width: 350px;
+    height: 80%;
+    max-height: 240px;
+    margin: 0px 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card .card-content {
+    padding: 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--main-bg-color);
+}
+
+.card .car-owner {
+    text-align: center;
+    font-style: italic;
+}
+
+/* Section: Stars */
+
+/* Footer */
+#footer {
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: var(--main-bg-color);
+}
+
+#footer .footer-nav ul li{
+    display: inline;
+    margin: 0px 10px;
+}
+
+#footer .footer-nav ul li a{
+    padding: 10px;
+    border-radius: 20px;
+    transition: .8s all;
+}
+
+#footer .footer-nav ul li a:hover {
+    color: var(--main-black);
+    background: var(--main-gray);
+}
+
+#footer .social-links p {
+    display: inline;
+}
+
+#footer .social-links i {
+    margin: 0px 8px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 0 0px rgba(0, 0, 0, 0.4);
+    transition: .8s all;
+}
+
+#footer .social-links i:hover {
+    color: var(--main-black);
 }
