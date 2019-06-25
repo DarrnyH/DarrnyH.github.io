@@ -19,6 +19,7 @@ body {
     color: var(--main-white);
     font-size: 1.2rem;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
@@ -39,6 +40,7 @@ a {
     align-items: center;
     border-bottom: 1px var(--main-white) solid;
     background: rgba(0, 0, 0, 0.1);
+
 }
 
 #navbar a {
@@ -73,6 +75,7 @@ a {
     background: var(--main-gray);
     color: var(--main-black);
 }
+
 
 /* Showcase */
 #showcase {
@@ -136,6 +139,7 @@ section:nth-child(even) {
     border-bottom: 1px var(--main-white) solid;
 }
 
+
 /* Cards */
 .container {
     display: flex;
@@ -148,17 +152,20 @@ section:nth-child(even) {
 .card {
     display: flex;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 80%;
-    height: 300px;
+    width: 100%;
+    max-width: 2100px;
+    padding: 30px 0px;
     background: var(--main-gray);
+    justify-content: space-around;
     align-items: center;
     margin: 30px 0;
     transition: .8s all;
+    overflow: hidden;
 }
 
 .card:hover {
-    width: 90%;
-    height: 350px;
+    /* H3h394's idea: far better than my initial idea */
+    transform: translateY(-20px);
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -173,6 +180,7 @@ section:nth-child(even) {
 
 .card .card-content {
     padding: 20px;
+    max-width: 1050px;
     font-size: 1rem;
     text-align: center;
     color: var(--main-bg-color);
@@ -184,6 +192,120 @@ section:nth-child(even) {
 }
 
 /* Section: Stars */
+#stars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.star-card {
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    max-width: 520px;
+    height: 500px;
+    background: var(--main-gray);
+    margin: 20px 0;
+    transition: .8s all;
+}
+
+.star-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.9);
+}
+
+.star-card .star-card-img {
+    max-width: 350px;
+    max-height: 240px;
+    width: 90%;
+    height: 80%;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.star-card .star-name {
+    color: var(--main-bg-color);
+}
+
+@media(max-width: 650px) {
+    .card-img {
+        display: none;
+    }
+
+    .star-card {
+        min-width: 440px;
+    }
+
+    #navbar ul {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar ul li {
+        margin: 1px 0;
+    }
+
+    #navbar ul li a {
+        border-radius: 0px;
+        border-bottom: 1px var(--main-white) solid;
+    }
+}
+
+@media (max-width: 1100px) {
+    .about-image {
+        display: none;
+    }
+
+    #navbar {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .star-card {
+        min-width: 320px;
+    }
+
+    #footer {
+        flex-direction: column;
+    }
+
+    #footer .footer-copyright {
+        font-size: .5rem;
+    }
+
+    #footer a {
+        font-size: .5rem;
+    }
+
+    #footer .footer-nav ul li a:hover{
+        padding: 1px;
+        border-radius: 20px;
+        background: var(--main-bg-color);
+    }
+
+    #footer .social-links{
+        display: flex;
+    }
+
+    #footer .social-links i {
+        font-size: 2rem;
+        box-shadow: 0px 0px rgba(0, 0, 0, 0.0);
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1100px) {
+
+}
 
 /* Footer */
 #footer {
@@ -201,14 +323,13 @@ section:nth-child(even) {
 }
 
 #footer .footer-nav ul li a{
-    padding: 10px;
+    padding: 1px;
     border-radius: 20px;
     transition: .8s all;
 }
 
 #footer .footer-nav ul li a:hover {
     color: var(--main-black);
-    background: var(--main-gray);
 }
 
 #footer .social-links p {
